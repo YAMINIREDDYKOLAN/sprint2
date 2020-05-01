@@ -14,6 +14,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Login-service</name>
 	<description>Demo project for Spring Boot</description>
+	
+<!-- 	<groupId>com.example.eureka.client</groupId> -->
+<!-- 	<artifactId>EurekaClientApplication</artifactId> -->
+<!-- 	<version>0.0.1-SNAPSHOT</version> -->
+<!-- 	<name>EurekaClientApplication</name> -->
+<!-- 	<description>Demo project for Spring Boot</description> -->
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -44,8 +50,9 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0</version>
 		</dependency>
-
-		<dependency>
+		
+		
+		 <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -68,3 +75,8 @@
 	</build>
 
 </project>
+
+	
+	
+	
+	
