@@ -1,6 +1,6 @@
 package com.cap.service;
 
-import com.cap.bean.VerificationDto;
+import com.cap.entity.VerificationDto;
 
 public interface EmployeeService {
 

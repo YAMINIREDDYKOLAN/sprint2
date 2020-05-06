@@ -14,29 +14,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.cap.bean.EmployeeDocumentDto;
-import com.cap.bean.Response;
+import com.cap.entity.EmployeeDocumentDto;
+import com.cap.entity.Response;
 import com.cap.service.EmployeeService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-//@SuppressWarnings("unused")
+@SuppressWarnings("unused")
 @RestController
 @RequestMapping("/bgv")
-//@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:4200")
 
 public class EmployeeController {
 
 	@Autowired 
 	EmployeeService bcgservice;
 
-	@PostMapping(value="/uploadFile/{emp-id}/{emp-name}",consumes=MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<Response> uploadingFile(@RequestParam("file") MultipartFile file, @PathVariable("emp-id") int empid,@PathVariable("emp-name") String empname) throws IOException
+	@PostMapping(value="/uploadFile",consumes=MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<Response> uploadingFile(@RequestParam("file") MultipartFile file, @RequestParam("user") String user) throws IOException
     {
-    	EmployeeDocumentDto  dbfile =new  EmployeeDocumentDto();
-    	//dbfile.setFileName(file.getOriginalFilename());
-    	dbfile.setDocData(file.getBytes());
-    	dbfile.setDocType("image");
-    	dbfile.setEmpId(empid);
-    	dbfile.setEmpName(empname);
+    	EmployeeDocumentDto  dbfile =new  ObjectMapper().readValue(user, EmployeeDocumentDto.class);
+    	
     	EmployeeDocumentDto dbperson=bcgservice.save(dbfile);
     	if(dbperson!=null)
     	{

@@ -1,9 +1,25 @@
 package com.cap.service;
 
-import com.cap.bean.EmployeeDocumentDto;
+
+
+import org.springframework.web.multipart.MultipartFile;
+
+
+
+import com.cap.entity.EmployeeDocumentDto;
+
+import com.cap.entity.VerificationDto;
+
+
 
 public interface EmployeeService {
 
-	EmployeeDocumentDto save(EmployeeDocumentDto dbfile);
+EmployeeDocumentDto uploadFile(MultipartFile file, String user);
+
+
+
+	
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.cap.bean;
+package com.cap.entity;
 
 public class Response {
 	private String message;

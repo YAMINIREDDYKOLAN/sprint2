@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cap.bean.LoginDto;
+import com.cap.entity.LoginDto;
 import com.cap.service.LoginService;
 
 
-//@SuppressWarnings("unused")
+
 @RestController
 @RequestMapping("/bgv")
-//@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:4200")
 
 public class EmployeeController 
 {
@@ -31,3 +31,6 @@ public class EmployeeController
 			return response;
 		}
 }
+
+
+

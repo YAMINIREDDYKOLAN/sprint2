@@ -1,4 +1,4 @@
-package com.cap.bean;
+package com.cap.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="verificationtable1")
+@Table(name="verificationtable")
 
 public class VerificationDto
 {

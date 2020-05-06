@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cap.bean.VerificationDto;
+import com.cap.entity.VerificationDto;
 import com.cap.service.EmployeeService;
 
-//@SuppressWarnings("unused")
+@SuppressWarnings("unused")
 @RestController
 @RequestMapping("/bgv")
-//@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:4200")
 
 public class EmployeeController
 {

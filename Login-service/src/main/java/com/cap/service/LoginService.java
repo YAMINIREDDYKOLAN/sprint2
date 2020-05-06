@@ -1,6 +1,6 @@
 package com.cap.service;
 
-import com.cap.bean.LoginDto;
+import com.cap.entity.LoginDto;
 
 public interface LoginService {
 

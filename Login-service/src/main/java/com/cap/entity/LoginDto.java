@@ -1,4 +1,4 @@
-package com.cap.bean;
+package com.cap.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="logintable5")
+@Table(name="logintable")
 public class LoginDto 
 {
 
@@ -15,6 +15,12 @@ public class LoginDto
 	String password;
 	int roleId;
 	
+	public int getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
 	public int getEmpId() {
 		return empId;
 	}
@@ -27,10 +33,5 @@ public class LoginDto
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getRoleId() {
-		return roleId;
-	}
-	public void setRoleId(int roleId) {
-		this.roleId = roleId;
-	}
+	
 }

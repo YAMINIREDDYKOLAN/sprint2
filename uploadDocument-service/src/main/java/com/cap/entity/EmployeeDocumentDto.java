@@ -1,4 +1,4 @@
-package com.cap.bean;
+package com.cap.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

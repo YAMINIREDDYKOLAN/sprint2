@@ -3,7 +3,7 @@ package com.cap.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.cap.bean.LoginDto;
+import com.cap.entity.LoginDto;
 
 public interface LoginDaoRepository extends JpaRepository<LoginDto,Integer> {
 
