@@ -11,6 +11,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployeeDaoRepository extends JpaRepository<VerificationDto,Integer>{
 
+	VerificationDto checkstatus(int id);
+
 
 
 		/*@Query("select e from VerificationDto e where empid=?1 ")

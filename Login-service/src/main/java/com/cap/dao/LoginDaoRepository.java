@@ -9,6 +9,6 @@ public interface LoginDaoRepository extends JpaRepository<LoginDto,Integer> {
 
 	@Query("select login from LoginDto login  where empId=?1 and password=?2 ")
 	
-	LoginDto authentication(int id, String pass);
+	LoginDto authentication(int empId, String password);
 
 }

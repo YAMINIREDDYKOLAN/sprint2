@@ -15,7 +15,7 @@ import com.cap.service.LoginService;
 
 
 @RestController
-@RequestMapping("/bgv")
+@RequestMapping("/emp")
 @CrossOrigin("http://localhost:4200")
 
 public class EmployeeController 
@@ -23,7 +23,8 @@ public class EmployeeController
 
 	@Autowired
 	LoginService loginservice;
-	@GetMapping(value="/login/{enter-userid}/{password}")
+	
+	@GetMapping(value="/login/{userid}/{password}")
 	public ResponseEntity<LoginDto> authentication(@PathVariable("enter-userid") int id,@PathVariable("password") String pass)
 	{
 		LoginDto loginobj=loginservice.authentication(id,pass);

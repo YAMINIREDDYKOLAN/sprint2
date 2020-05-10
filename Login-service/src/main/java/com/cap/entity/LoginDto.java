@@ -6,21 +6,19 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="logintable")
+@Table(name="login666")
 public class LoginDto 
 {
 
 	@Id
 	int empId;
 	String password;
-	int roleId;
+	//int roleId;
 	
-	public int getRoleId() {
-		return roleId;
-	}
-	public void setRoleId(int roleId) {
-		this.roleId = roleId;
-	}
+	/*
+	 * public int getRoleId() { return roleId; } public void setRoleId(int roleId) {
+	 * this.roleId = roleId; }
+	 */
 	public int getEmpId() {
 		return empId;
 	}
