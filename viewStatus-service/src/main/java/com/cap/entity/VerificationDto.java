@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="verificationtable")
+@Table(name="verification1")
 
 public class VerificationDto
 {

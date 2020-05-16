@@ -1,4 +1,4 @@
-package com.bezkoder.spring.files.upload.service;
+package com.cap.service;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -52,18 +52,13 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     }
   }
 
-  @Override
-  public void deleteAll() {
-    FileSystemUtils.deleteRecursively(root.toFile());
-  }
-
-  @Override
-  public Stream<Path> loadAll() {
-    try {
-      return Files.walk(this.root, 1).filter(path -> !path.equals(this.root)).map(this.root::relativize);
-    } catch (IOException e) {
-      throw new RuntimeException("Could not load the files!");
-    }
-  }
+	// @Override public void deleteAll() {
+	  //FileSystemUtils.deleteRecursively(root.toFile()); }
+	 
+	  @Override public Stream<Path> loadAll() { try { return Files.walk(this.root,
+	  1).filter(path -> !path.equals(this.root)).map(this.root::relativize); }
+	  catch (IOException e) { throw new
+	  RuntimeException("Could not load the files!"); } }
+	 
 
 }

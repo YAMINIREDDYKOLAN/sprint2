@@ -1,4 +1,4 @@
-package com.bezkoder.spring.files.upload.service;
+package com.cap.service;
 
 import java.nio.file.Path;
 import java.util.stream.Stream;
@@ -13,7 +13,8 @@ public interface FilesStorageService {
 
   public Resource load(String filename);
 
-  public void deleteAll();
+	// public void deleteAll();
+	  
+	  public Stream<Path> loadAll();
 
-  public Stream<Path> loadAll();
 }

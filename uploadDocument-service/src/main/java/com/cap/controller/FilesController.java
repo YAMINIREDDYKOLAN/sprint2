@@ -1,4 +1,4 @@
-package com.bezkoder.spring.files.upload.controller;
+package com.cap.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
-import com.bezkoder.spring.files.upload.model.FileInfo;
-import com.bezkoder.spring.files.upload.model.ResponseMessage;
-import com.bezkoder.spring.files.upload.service.FilesStorageService;
+import com.cap.entity.FileInfo;
+import com.cap.entity.ResponseMessage;
+import com.cap.service.FilesStorageService;
 
 @Controller
 @CrossOrigin("http://localhost:8081")
@@ -42,18 +42,17 @@ public class FilesController {
     }
   }
 
-  @GetMapping("/files")
-  public ResponseEntity<List<FileInfo>> getListFiles() {
-    List<FileInfo> fileInfos = storageService.loadAll().map(path -> {
-      String filename = path.getFileName().toString();
-      String url = MvcUriComponentsBuilder
-          .fromMethodName(FilesController.class, "getFile", path.getFileName().toString()).build().toString();
-
-      return new FileInfo(filename, url);
-    }).collect(Collectors.toList());
-
-    return ResponseEntity.status(HttpStatus.OK).body(fileInfos);
-  }
+	
+	  @GetMapping("/files") public ResponseEntity<List<FileInfo>> getListFiles() {
+	  List<FileInfo> fileInfos = storageService.loadAll().map(path -> { String
+	  filename = path.getFileName().toString(); String url =
+	  MvcUriComponentsBuilder .fromMethodName(FilesController.class, "getFile",
+	  path.getFileName().toString()).build().toString();
+	  
+	  return new FileInfo(filename, url); }).collect(Collectors.toList());
+	 
+	  return ResponseEntity.status(HttpStatus.OK).body(fileInfos); }
+	 
 
   @GetMapping("/files/{filename:.+}")
   public ResponseEntity<Resource> getFile(@PathVariable String filename) {

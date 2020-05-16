@@ -1,4 +1,4 @@
-package com.bezkoder.spring.files.upload.model;
+package com.cap.entity;
 
 public class ResponseMessage {
   private String message;

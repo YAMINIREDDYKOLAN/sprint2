@@ -3,10 +3,13 @@ package com.cap;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class UploadDocumentServiceApplication {
+
+@SpringBootApplication
+
+public class ViewStatusServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UploadDocumentServiceApplication.class, args);
+		SpringApplication.run(ViewStatusServiceApplication.class, args);
 	}
 
 }

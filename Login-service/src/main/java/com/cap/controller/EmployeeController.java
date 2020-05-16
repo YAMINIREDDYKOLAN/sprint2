@@ -24,8 +24,8 @@ public class EmployeeController
 	@Autowired
 	LoginService loginservice;
 	
-	@GetMapping(value="/login/{userid}/{password}")
-	public ResponseEntity<LoginDto> authentication(@PathVariable("enter-userid") int id,@PathVariable("password") String pass)
+	@GetMapping(value="/login/{EmpId}/{password}")
+	public ResponseEntity<LoginDto> authentication(@PathVariable("EmpId") int id,@PathVariable("password") String pass)
 	{
 		LoginDto loginobj=loginservice.authentication(id,pass);
 			ResponseEntity<LoginDto> response=new ResponseEntity<LoginDto>(loginobj,HttpStatus.OK);

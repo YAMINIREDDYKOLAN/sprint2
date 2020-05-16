@@ -21,8 +21,6 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	public VerificationDto checkstatus(int id) {
 
-		// TODO Auto-generated method stub
-
 		return statusdao.checkstatus(id);
 
 	}

@@ -6,12 +6,12 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="login666")
+@Table(name="login")
 public class LoginDto 
 {
 
 	@Id
-	int empId;
+	int EmpId;
 	String password;
 	//int roleId;
 	
@@ -20,10 +20,10 @@ public class LoginDto
 	 * this.roleId = roleId; }
 	 */
 	public int getEmpId() {
-		return empId;
+		return EmpId;
 	}
 	public void setEmpId(int empId) {
-		this.empId = empId;
+		this.EmpId = empId;
 	}
 	public String getPassword() {
 		return password;
